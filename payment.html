@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | Midundoooh Vehicles Co. Ltd</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="payment-container">
+        <h2>Complete Your Purchase</h2>
+        <div class="payment-details">
+            <h3 id="vehicle-name"></h3>
+            <p><strong>Price:</strong> <span id="vehicle-price"></span></p>
+        </div>
+
+        <h3>Select Payment Method:</h3>
+        <div class="payment-methods">
+            <button id="mpesa">M-Pesa</button>
+            <button id="tigopesa">Tigo Pesa</button>
+            <button id="airtelmoney">Airtel Money</button>
+            <button id="halopesa">HaloPesa</button>
+            <button id="paypal">PayPal</button>
+            <button id="stripe">Stripe</button>
+        </div>
+
+        <button class="back-button" onclick="goBack()">Cancel</button>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

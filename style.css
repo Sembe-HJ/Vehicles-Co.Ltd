@@ -1,0 +1,556 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Anton', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero .overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: gold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: silver;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 250px;
+    border-radius: 10px;
+    border-bottom: 2px solid gold;
+    outline: none;
+    background: black;
+    color: gold;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    background-color: black;
+    color: gold;
+    border: 2px dotted gold;
+    border-bottom: 2px solid gold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: gold;
+    color: #121212;
+}
+
+/* Featured & Listings Section */
+.featured, .listings, .sell, .testimonials {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: gold;
+}
+
+/* Vehicle Grid */
+.vehicle-grid, .listing-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.vehicle-card, .listing-card {
+    background: #1f1f1f;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.vehicle-card img, .listing-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.vehicle-card h3, .listing-card h3 {
+    margin: 10px 0;
+    color: silver;
+}
+
+.vehicle-card p, .listing-card p {
+    color: red;
+}
+
+.vehicle-card button, .listing-card button {
+    padding: 10px;
+    border: 1px dotted gold;
+    border-bottom: 2px solid gold;
+    border-radius: 10px;
+    background: black;
+    color: gold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.vehicle-card:hover, .listing-card:hover {
+    transform: scale(1.05);
+}
+
+/* Filters */
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.filters select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Sell Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+form input, form textarea {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    border: none;
+    border-bottom: 2px solid gold;
+    outline: none;
+    background: black;
+    color: gold;
+}
+
+form button {
+    padding: 10px 20px;
+    background: black;
+    color: gold;
+    border: 2px dotted gold;
+    border-bottom: 2px solid gold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: gold;
+    color: #121212;
+}
+
+/* Testimonials */
+.testimonial {
+    background: #1f1f1f;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    color: lightgray;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: lightgray;
+    margin-top: 50px;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #1f1f1f;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 8px;
+    color: #fff;
+    position: relative;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: red;
+}
+
+.modal-close {
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px dotted gold;
+    border-bottom: 2px solid gold;
+    background: black;
+    color: gold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.modal-content p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: silver;
+}
+
+.modal-content strong {
+    color: gold;
+}
+.modal-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-buttons button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#buy-now {
+    background: gold;
+    color: black;
+}
+
+#contact-seller {
+    background: gold;
+    color: black;
+}
+
+.modal-buttons button:hover {
+    opacity: 0.8;
+}
+.payment-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #1f1f1f;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.payment-details {
+    margin-bottom: 20px;
+}
+
+.payment-methods button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#mpesa { background: green; color: white; }
+#tigopesa { background: blue; color: white; }
+#airtelmoney { background: red; color: white; }
+#halopesa { background: orange; color: white; }
+#paypal { background: navy; color: white; }
+#stripe { background: purple; color: white; }
+
+.back-button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: darkred;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.payment-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #1f1f1f;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.payment-details {
+    margin-bottom: 20px;
+}
+
+.payment-methods button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#mpesa { background: green; color: white; }
+#tigopesa { background: blue; color: white; }
+#airtelmoney { background: red; color: white; }
+#halopesa { background: orange; color: white; }
+#paypal { background: navy; color: white; }
+#stripe { background: purple; color: white; }
+
+.back-button {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px dotted gold;
+    border-bottom: 2px solid gold;
+    background: black;
+    color: gold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* General Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Popup Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -55%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* Contact Buttons */
+.contact-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    width: 80%;
+}
+
+.whatsapp {
+    background: green;
+    color: white;
+}
+
+.whatsapp:hover {
+    background: darkgreen;
+}
+
+.email {
+    background: blue;
+    color: white;
+}
+
+.email:hover {
+    background: darkblue;
+}
+
+.sms {
+    background: red;
+    color: white;
+}
+
+.sms:hover {
+    background: darkred;
+}
+
+/* Close Button */
+.close-btn {
+    background: gray;
+    color: gold;
+    padding: 8px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: darkgray;
+}
+
+/* Confirmation Message */
+.confirmation {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: green;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    animation: slideUp 0.5s ease-out;
+}
+
+/* Confirmation Animation */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+/* Kuongeza mwangaza wa premium colors */
+.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    animation: fadeIn 2s ease-in-out; /* Smooth entry */
+    filter: drop-shadow(0px 0px 10px gold); /* Glow effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Inaongeza ukubwa kidogo uki-hover */
+    filter: drop-shadow(0px 0px 20px red); /* Glow color change */
+}
+
+/* Animation ya kuingia kwa smooth */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Muonekano wa Jina la Kampuni */
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: gold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px red;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+/* Animation ya Text */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+header {
+    background: linear-gradient(to right, #111, #222); /* Dark premium background */
+    padding: 20px 0;
+    border-bottom: 3px solid gold; /* Mistari ya kifahari */
+    box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3);
+}
+
+#logout {
+    position: sticky;
+    align-content: center;
+    background: black;
+    color: gold;
+    border: 2px dotted gold;
+    border-bottom: 2px solid gold;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    animation: bounce 2s infinite alternate;
+}
+
+
+
+

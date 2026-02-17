@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Vehicles</title>
+    <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Anton&display=swap" rel="stylesheet">
+  <style>
+  body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: black;
+    padding: 35px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 10px 15px gold;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 50%;
+    background: black;
+    color: gold;
+    border: none;
+    cursor: pointer;
+    border-bottom: 2px solid gold;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    animation: bounce 2s infinite alternate;
+}
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+button:hover {
+    background: black;
+    color: gold;
+    border: 1px dotted gold;
+    border-bottom: 3px solid gold;
+}
+  #register input,
+  #login input {
+    color: gold;
+    outline: none;
+    padding:4px;
+    height:30px;
+    width:250px;
+    border-radius:5px;
+    border:none;
+    border-bottom:2px solid gold;
+    background-color:black;
+  }
+  
+  #register input:focus,
+  #login input:focus  {
+    background-color: black;
+  }
+  h2,
+  p  {
+    color: gold;
+  }
+  
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div id="register">
+            <h2 id="h2">Register Here</h2>
+            <input type="text" id="regName" placeholder="Enter Name">
+            <input type="email" id="regEmail" placeholder="Enter Email">
+            <input type="password" id="regPassword" placeholder="Enter Password">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password">
+            <button onclick="register()">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="showLogin()" id="p">Login</a></p>
+        </div>
+
+        <div id="login" style="display: none;">
+            <h2>Login Now</h2>
+            <input type="email" id="loginEmail" placeholder="Enter Email">
+            <input type="password" id="loginPassword" placeholder="Enter Password">
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showRegister()" id="p">Register</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

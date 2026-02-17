@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midundoooh Vehicles Co. Ltd</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        
+        <div class="overlay">
+            <img src="pch/loge.png" alt="Midundooh Vehicles Logo" class="logo">
+            <h1>Midundoooh Vehicles Co. Ltd</h1>
+            <p>Drive Your Dream, Own Your Ride!</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for a vehicle...">
+                <button>Search</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Vehicles -->
+    <section class="featured">
+        <h2>Featured Vehicles</h2>
+        <div class="vehicle-grid">
+            <div class="vehicle-card">
+                <img src="pch/car1.jpg" alt="Luxury Car">
+                <h3>2023 BMW X5</h3>
+                <p>45,000,000 Tsh</p>
+                <button>View More</button>
+            </div>
+            <div class="vehicle-card">
+                <img src="pch/car2.jpg" alt="Sport Car">
+                <h3>2022 Rolls Royce</h3>
+                <p>50,000,000 Tsh</p>
+                <button>View More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle Listings -->
+    <section class="listings">
+        <h2>Explore Our Vehicles</h2>
+        <div class="filters">
+            <select>
+                <option>All Types</option>
+                <option>Ford</option>
+                <option>Audi</option>
+                <option>Motorcycle</option>
+            </select>
+            <select>
+                <option>Price Range</option>
+                <option>Below 10,000,000 Tsh</option>
+                <option>10,000,000 Tsh - 30,000,000 Tsh</option>
+                <option>Above 30,000,000 Tsh</option>
+            </select>
+        </div>
+        <div class="listing-grid">
+            <div class="listing-card">
+                <img src="pch/car3.jpg" alt="Car">
+                <h3>2025 Tesla Cybertruck</h3>
+                <p>450,000,000 Tsh</p>
+                <button>Details</button>
+            </div>
+            <div class="listing-card">
+                <img src="pch/bike3.jpg" alt="Motorcycle">
+                <h3>2023 Yamaha R1</h3>
+                <p>18,500,000 Tsh</p>
+                <button>Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sell Your Vehicle -->
+    <section class="sell">
+        <h2>Sell Your Vehicle</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Vehicle Model" required>
+            <input type="number" placeholder="Price" required>
+            <textarea placeholder="Vehicle Description"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial">
+            <p>"Amazing service and great cars!" - Hansy Midundooh</p>
+            <p>"Much Appreciate on your Works and Loyality!" - Hassan Sembe</p>
+            <p>"Great Dream became Successfull with Midundooh Vehicles Co.Ltd!" - Kamara 27</p>
+        </div>
+        <button onclick="logout()" id="logout">Logout</button>
+             <script>
+        function logout() {
+            alert("Logged out successfully!");
+            window.location.href = "index.html";
+        }
+    </script>
+    </section>
+    <!-- Contact Popup -->
+<div id="contact-popup" class="popup">
+    <div class="popup-content">
+        <h2>Contact Seller</h2>
+        <p>Choose how you'd like to contact the seller:</p>
+        <button class="contact-btn whatsapp" onclick="contactSeller('whatsapp')">📱 WhatsApp</button>
+        <button class="contact-btn email" onclick="contactSeller('email')">📧 Email</button>
+        <button class="contact-btn sms" onclick="contactSeller('sms')">✉️ SMS</button>
+        <button class="close-btn" onclick="closeContactPopup()">Cancel</button>
+    </div>
+</div>
+
+<!-- Confirmation Message -->
+<div id="confirmation" class="confirmation">
+    <p>✔ Contacting via <span id="selected-method"></span></p>
+</div>
+
+    <!-- Contact & Footer -->
+    <footer>
+        <p>© 2025 Midundoooh Vehicles Co. Ltd</p>
+    </footer>
+
+  <!-- Popup Modal -->
+<div class="modal" id="vehicleModal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="modal-title"></h2>
+        <img id="modal-image" src="" alt="Vehicle Image">
+        <p id="modal-price"></p>
+        <p><strong>Mileage:</strong> <span id="modal-mileage"></span></p>
+        <p><strong>Condition:</strong> <span id="modal-condition"></span></p>
+        <p><strong>Fuel Type:</strong> <span id="modal-fuel"></span></p>
+        <p><strong>Transmission:</strong> <span id="modal-transmission"></span></p>
+        <p id="modal-description"></p>
+
+        <!-- Buttons -->
+        <div class="modal-buttons">
+            <button id="buy-now">Buy Now</button>
+            <button id="contact-seller">Contact Seller</button>
+        </div>
+
+        <button class="modal-close">Close</button>
+    </div>
+     
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
